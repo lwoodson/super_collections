@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.email  = 'lance@webmaneuvers.com'
   s.files  = [
                "lib/super_collections.rb",
-               "lib/super_array.rb"
+               "lib/super_collections/array.rb"
              ] 
   s.homepage  = 'https://github.com/lwoodson/super_collections/'
 
