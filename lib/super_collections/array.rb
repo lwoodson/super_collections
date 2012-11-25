@@ -1,6 +1,22 @@
 require 'delegate'
 
 class Array
+  # Convert the flattened array to an array of tuples.  Length of tuples can be
+  # specified with the first argument (default is 2).  What to pad incomplete 
+  # tuples with can be specified with the second argument (default is nil).  
+  # Examples:
+  #
+  #   [1,2,3,4].tupelize
+  #   => [[1, 2], [3, 4]]
+  #
+  #   [1,2,3,4,5,6].tupelize(3)
+  #   => [[1,2,3],[4,5,6]]
+  #
+  #   [1,2,3].tupelize
+  #   => [[1,2],[3,nil]
+  #
+  #   [1,2,3].tupelize(2,0)
+  #   => [[1,2],[3,0]]
   def tupelize(tuple_size=2, pad_with=nil)
     result = []
     inject(result) do |result, element|
