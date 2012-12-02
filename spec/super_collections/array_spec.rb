@@ -1,5 +1,5 @@
 require File.join(File.dirname(__FILE__), '..', 'spec_helper')
-require 'super_array'
+require 'super_collections/array'
 
 describe Array do
   context "tupelize" do
